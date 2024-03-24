@@ -8,7 +8,10 @@ export default function App() {
   const [query, setQuery] = useState("");
   useEffect(() => {
     async function fetchTransaction() {
-      const res = await fetch("http://localhost:3000/transactions");
+      // const res = await fetch("http://localhost:3000/transactions");
+      const res = await fetch(
+        "https://my-json-server.typicode.com/SFrasia/bank-of--flatiron/transactions"
+      );
       const data = await res.json();
       setTransaction(data);
     }
